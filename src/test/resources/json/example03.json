@@ -1,0 +1,24 @@
+{
+  "Nombre":"Gerd",
+  "Apellido":"Claros",
+  "Edad":34,
+  "Profesion":"Ingenieria de Sistema"
+  "Direccion":["Direccion 1","Direccion 2","Direccion 3"]
+  "Nacionalidades":[
+{
+  "Pais":"India",
+  "Data":{
+    "Capital":"New Delhi",
+    "Altitud":343,
+    "Lngitud":343
+  },
+{
+  "Pais":"Bolivia",
+  "Data":{
+    "Capital":"La PAZ",
+    "Altitud":343,
+    "Lngitud":343
+  }
+}
+]
+}
