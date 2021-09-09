@@ -1,6 +1,7 @@
 package com.talent;
 
 
+import com.talent.bind.BaseApiResponse;
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
 
@@ -50,7 +51,7 @@ public class SWApiTestWithRestAssured {
                 .queryParam("format", "json")
                 .log().all()
                 .when()
-                .post(baseApiResponse.getFilms())
+                .post(baseApiResponse.getPlanets())
                 .then()
                 .log().all()
                 .and()
@@ -59,36 +60,5 @@ public class SWApiTestWithRestAssured {
 
     }
 
-    private static class BaseApiResponse {
-        private String films;
-        private String vehicles;
-        private String people;
-        private String starships;
-        private String species;
-        private String planets;
 
-        public String getFilms() {
-            return films;
-        }
-
-        public String getVehicles() {
-            return vehicles;
-        }
-
-        public String getPeople() {
-            return people;
-        }
-
-        public String getStarships() {
-            return starships;
-        }
-
-        public String getSpecies() {
-            return species;
-        }
-
-        public String getPlanets() {
-            return planets;
-        }
-    }
 }
