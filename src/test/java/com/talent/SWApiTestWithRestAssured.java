@@ -17,17 +17,25 @@ public class SWApiTestWithRestAssured {
     @Test
     public void whenRequestingAResourceThenLinksToResourcesMustBeReturned() {
 
+        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
 
         RestAssured
                 .given()
                 .queryParam("format", "json")
-                .config(config().logConfig(logConfig()
-                        .enableLoggingOfRequestAndResponseIfValidationFails()))
-                .when().get("https://swapi.dev/api/planets/?format=json?")
-                .then().assertThat()
-                .statusCode(is(equalTo(200)));
+                .when()
+                .get("https://swapi.dev/api/")
+                .then()
+                .assertThat().statusCode(is(equalTo(200)));
 
+        RestAssured
+                .given()
+                .queryParam("format", "json")
+                .when()
+                .post("https://swapi.dev/api/films/")
+                .then()
+                .assertThat().statusCode(is(equalTo(200)));
     }
+
 
 
 }
