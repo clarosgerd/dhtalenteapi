@@ -1,18 +1,25 @@
 package com.talent;
 
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.talent.bind.BaseApiResponse;
 import io.restassured.RestAssured;
-import io.restassured.common.mapper.TypeRef;
+
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import static io.restassured.RestAssured.get;
+import static io.restassured.RestAssured.when;
 import static io.restassured.config.LogConfig.logConfig;
 import static io.restassured.config.RestAssuredConfig.config;
+import static io.restassured.path.json.JsonPath.from;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -59,14 +66,33 @@ public class SWApiTestWithRestAssured {
     public void whenTypeList() {
 
 
-        List<Map<String, Object>> people = get("https://swapi.dev/api/people/1/").as(new TypeRef<List<Map<String, Object>>>() {});
+        String response = get("https://swapi.dev/api/people/").asString();
+
+             List<String> films = from(response).getList("results.films[0]");
+                System.out.println(films);
 
 
-        // assertThat(people.get(0).get("count"), equalTo(82));
-        assertThat(people.get(0).get("name"), equalTo("Luke Skywalker"));
-        //    assertThat(people.get(0).get("height"), equalTo("172"));
-        //    assertThat(people.get(0).get("mass"), equalTo(77));
 
+}
+@Test
+    public void whenTypeListCondition() {
+
+
+    List<String> list=new ArrayList<String>();
+    Response response = get("https://swapi.dev/api/people/");
+    JsonPath jsonPathEvaluator = response.jsonPath();
+    list = jsonPathEvaluator.get("results.films");
+    assertThat(list.size(), is(10));
     }
 
+    @Test
+    public void whenTypeIntCondition() {
+
+
+        List<String> list=new ArrayList<String>();
+        Response response = get("https://swapi.dev/api/people/");
+        JsonPath jsonPathEvaluator = response.jsonPath();
+        list = jsonPathEvaluator.get("results.films[3]");
+        assertThat(list.size(), is(4));
+    }
 }
