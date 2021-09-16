@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.talent.SWApiTestWithRestAssured" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-16T19:19:30" hostname="DESKTOP-BLSEN4K" time="1.619">
+  <properties/>
+  <testcase name="whenTypeListCondition" classname="com.talent.SWApiTestWithRestAssured" time="1.619"/>
+  <system-out><![CDATA[io.restassured.path.json.JsonPath@5a5c128
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
