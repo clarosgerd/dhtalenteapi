@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">5.346s</div>
+<div class="counter">8.351s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,8 +78,8 @@
 </tr>
 </thead>
 <tr>
-<td class="success">loginTest</td>
-<td class="success">5.346s</td>
+<td class="success">getSingleUserTest</td>
+<td class="success">8.351s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,8 +87,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>Request method:	POST
-Request URI:	https://reqres.in/api/login
+<pre>Request method:	GET
+Request URI:	https://reqres.in/api/users/2
 Proxy:			&lt;none&gt;
 Request params:	&lt;none&gt;
 Query params:	&lt;none&gt;
@@ -98,32 +98,87 @@ Headers:		Accept=*/*
 				Content-Type=application/json
 Cookies:		&lt;none&gt;
 Multiparts:		&lt;none&gt;
-Body:
-{
-    &quot;email&quot;: &quot;eve.holt@reqres.in&quot;,
-    &quot;password&quot;: &quot;cityslicka&quot;
-}
+Body:			&lt;none&gt;
+Request method:	GET
+Request URI:	https://reqres.in/api/users/2
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
 HTTP/1.1 200 OK
-Date: Thu, 16 Sep 2021 19:19:28 GMT
+Date: Fri, 17 Sep 2021 15:33:11 GMT
 Content-Type: application/json; charset=utf-8
-Content-Length: 29
+Transfer-Encoding: chunked
 Connection: keep-alive
 x-powered-by: Express
 access-control-allow-origin: *
-etag: W/&quot;1d-lGCrvD6B7Qzk11+2C98+nGhhuec&quot;
+etag: W/&quot;118-pbdwwFo9SKNhD3Lx5iHJyngpq00&quot;
 via: 1.1 vegur
-CF-Cache-Status: DYNAMIC
+Cache-Control: max-age=14400
+CF-Cache-Status: HIT
+Age: 3648
 Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
-Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=HYNXBQEZ3hMiPiTNq8fOeUKArHoF2hrewOdqrewVmDPd93PrUWitfiexYJcWc%2BHoD3oLhJNAw5C2%2BVDYQcTYii45lFoROjFqqDAE56W%2BnNjMSwZLCpDv9X8p7E8%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=F3Nwf7QCcaXzxj2tCqrkbi18PAt6n4pomFMGWVCxAB7jfbZvKky9wJvHoa1q21ywJYlVJ%2F1piuk4rR8mwLgU%2F4YyEnuvLJGxZL7ihAxT6AFoSr0nTHpWLr%2BWPS0%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Vary: Accept-Encoding
 Server: cloudflare
-CF-RAY: 68fc724faa5b5000-LIM
+CF-RAY: 69036439fb014ffb-LIM
+Content-Encoding: gzip
 alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-27=&quot;:443&quot;; ma=86400
 
 {
-    &quot;token&quot;: &quot;QpwL5tke4Pnpja7X4&quot;
+    &quot;data&quot;: {
+        &quot;id&quot;: 2,
+        &quot;email&quot;: &quot;janet.weaver@reqres.in&quot;,
+        &quot;first_name&quot;: &quot;Janet&quot;,
+        &quot;last_name&quot;: &quot;Weaver&quot;,
+        &quot;avatar&quot;: &quot;https://reqres.in/img/faces/2-image.jpg&quot;
+    },
+    &quot;support&quot;: {
+        &quot;url&quot;: &quot;https://reqres.in/#support-heading&quot;,
+        &quot;text&quot;: &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;
+    }
 }
-{&quot;token&quot;:&quot;QpwL5tke4Pnpja7X4&quot;}
+HTTP/1.1 200 OK
+Date: Fri, 17 Sep 2021 15:33:11 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+x-powered-by: Express
+access-control-allow-origin: *
+etag: W/&quot;118-pbdwwFo9SKNhD3Lx5iHJyngpq00&quot;
+via: 1.1 vegur
+Cache-Control: max-age=14400
+CF-Cache-Status: HIT
+Age: 3648
+Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=F3Nwf7QCcaXzxj2tCqrkbi18PAt6n4pomFMGWVCxAB7jfbZvKky9wJvHoa1q21ywJYlVJ%2F1piuk4rR8mwLgU%2F4YyEnuvLJGxZL7ihAxT6AFoSr0nTHpWLr%2BWPS0%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 69036439fb014ffb-LIM
+Content-Encoding: gzip
+alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-27=&quot;:443&quot;; ma=86400
+
+{
+    &quot;data&quot;: {
+        &quot;id&quot;: 2,
+        &quot;email&quot;: &quot;janet.weaver@reqres.in&quot;,
+        &quot;first_name&quot;: &quot;Janet&quot;,
+        &quot;last_name&quot;: &quot;Weaver&quot;,
+        &quot;avatar&quot;: &quot;https://reqres.in/img/faces/2-image.jpg&quot;
+    },
+    &quot;support&quot;: {
+        &quot;url&quot;: &quot;https://reqres.in/#support-heading&quot;,
+        &quot;text&quot;: &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;
+    }
+}
 </pre>
 </span>
 </div>
@@ -135,7 +190,7 @@ alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3-28=
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.2</a> at 16-09-2021 03:19:31 PM</p>
+<a href="http://www.gradle.org">Gradle 7.1</a> at 17-09-2021 11:33:17 AM</p>
 </div>
 </div>
 </body>
