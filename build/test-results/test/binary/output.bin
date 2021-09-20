@@ -1,92 +1,3 @@
-Request method:	GET
-,Request URI:	https://reqres.in/api/users/2
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-#				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-Request method:	GET
-,Request URI:	https://reqres.in/api/users/2
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-#				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-%Date: Fri, 17 Sep 2021 15:33:11 GMT
-/Content-Type: application/json; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-x-powered-by: Express
- access-control-allow-origin: *
-+etag: W/"118-pbdwwFo9SKNhD3Lx5iHJyngpq00"
-via: 1.1 vegur
-Cache-Control: max-age=14400
-CF-Cache-Status: HIT
-Age: 3648
-dExpect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-úReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=F3Nwf7QCcaXzxj2tCqrkbi18PAt6n4pomFMGWVCxAB7jfbZvKky9wJvHoa1q21ywJYlVJ%2F1piuk4rR8mwLgU%2F4YyEnuvLJGxZL7ihAxT6AFoSr0nTHpWLr%2BWPS0%3D"}],"group":"cf-nel","max_age":604800}
-CNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-Vary: Accept-Encoding
-Server: cloudflare
-CF-RAY: 69036439fb014ffb-LIM
-Content-Encoding: gzip
-falt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
-
-{
-    "data": {
-        "id": 2,
-+        "email": "janet.weaver@reqres.in",
-        "first_name": "Janet",
-        "last_name": "Weaver",
-<        "avatar": "https://reqres.in/img/faces/2-image.jpg"
-    },
-    "support": {
-5        "url": "https://reqres.in/#support-heading",
-[        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
-    }
-}
-HTTP/1.1 200 OK
-%Date: Fri, 17 Sep 2021 15:33:11 GMT
-/Content-Type: application/json; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-x-powered-by: Express
- access-control-allow-origin: *
-+etag: W/"118-pbdwwFo9SKNhD3Lx5iHJyngpq00"
-via: 1.1 vegur
-Cache-Control: max-age=14400
-CF-Cache-Status: HIT
-Age: 3648
-dExpect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-úReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=F3Nwf7QCcaXzxj2tCqrkbi18PAt6n4pomFMGWVCxAB7jfbZvKky9wJvHoa1q21ywJYlVJ%2F1piuk4rR8mwLgU%2F4YyEnuvLJGxZL7ihAxT6AFoSr0nTHpWLr%2BWPS0%3D"}],"group":"cf-nel","max_age":604800}
-CNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-Vary: Accept-Encoding
-Server: cloudflare
-CF-RAY: 69036439fb014ffb-LIM
-Content-Encoding: gzip
-falt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
-
-{
-    "data": {
-        "id": 2,
-+        "email": "janet.weaver@reqres.in",
-        "first_name": "Janet",
-        "last_name": "Weaver",
-<        "avatar": "https://reqres.in/img/faces/2-image.jpg"
-    },
-    "support": {
-5        "url": "https://reqres.in/#support-heading",
-[        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
-    }
-}
+id:192
+name:morpheus
+$createdAt:2021-09-20T18:42:12.522Z

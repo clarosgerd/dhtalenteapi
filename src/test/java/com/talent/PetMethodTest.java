@@ -11,10 +11,11 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
-public class getMethodTest {
+public class PetMethodTest {
 
     @Before
     public void setup() {
+
 
         RestAssured.baseURI = "https://reqres.in";
         RestAssured.basePath = "/api";
@@ -23,16 +24,12 @@ public class getMethodTest {
     @Test
     public void getSingleUserTest() {
 
-
                  given()
-                .log().all()
                 .contentType(ContentType.JSON)
-                .get("/users/2")
+                .get("/users/3")
                 .then()
-                .log()
-                .all()
                 .statusCode(200)
-                .body("data.id", equalTo(2));
+                .body("data.id", equalTo(3));
 
     }
 }

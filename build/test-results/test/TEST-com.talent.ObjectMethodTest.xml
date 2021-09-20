@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.talent.ObjectMethodTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-20T18:42:10" hostname="DESKTOP-BLSEN4K" time="8.136">
+  <properties/>
+  <testcase name="createUserTest" classname="com.talent.ObjectMethodTest" time="8.136"/>
+  <system-out><![CDATA[id:192
+name:morpheus
+createdAt:2021-09-20T18:42:12.522Z
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

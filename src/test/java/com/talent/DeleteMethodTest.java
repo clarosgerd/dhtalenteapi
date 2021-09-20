@@ -14,42 +14,39 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
-public class deleteMethodTest {
+public class DeleteMethodTest {
 
     @Before
     public void setup() {
 
-        RestAssured.baseURI = "https://reqres.in";
-        RestAssured.basePath = "/api";
+        RestAssured.baseURI = "http://localhost:3000/";
+        RestAssured.basePath = "/posts";
         RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
         RestAssured.requestSpecification=new RequestSpecBuilder().setContentType(ContentType.JSON).build();
-
-
     }
-    @Test
+    /*@Test
     public void deleteUserTest() {
         given()
                 .get("users/2")
                 .then()
                 .statusCode(HttpStatus.SC_NO_CONTENT);
-    }
+    }*/
     @Test
-    public void patchUserTest() {
+    public void getAllTest() {
        String nameUpdated= given()
                 .body("{\n" +
-                        "    \"name\": \"morpheus\",\n" +
-                        "    \"job\": \"zion resident\"\n" +
+                        "    \"title\": \"Anita's\"\n" +
                         "}")
-                .patch("users/2")
+                .patch("/1")
                 .then()
                 .statusCode(HttpStatus.SC_OK)
                 .extract()
                 .jsonPath()
-                .getString("name");
+                .getString("title");
 
-        assertThat(nameUpdated,equalTo("morpheus"));
+              assertThat(nameUpdated,equalTo("Anita"));
     }
-
+  /*  @Test
     public void putUserTest () {
 
         String nameUpdated= given()
@@ -66,6 +63,6 @@ public class deleteMethodTest {
 
         assertThat(nameUpdated,equalTo("zion resident"));
 
-    }
+    }*/
 
 }
