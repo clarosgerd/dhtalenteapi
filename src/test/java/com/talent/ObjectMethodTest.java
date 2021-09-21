@@ -1,5 +1,7 @@
 package com.talent;
 
+import com.talent.model.CreateUserRequest;
+import com.talent.model.CreateUserResponse;
 import com.talent.model.Users;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -9,6 +11,8 @@ import io.restassured.http.ContentType;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -22,16 +26,9 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class ObjectMethodTest {
+public class ObjectMethodTest extends BaseApi {
 
-    @Before
-    public void setup() {
-
-        RestAssured.baseURI = "https://reqres.in";
-        RestAssured.basePath = "/api";
-      //  RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
-        RestAssured.requestSpecification = new RequestSpecBuilder().setContentType(ContentType.JSON).build();
-    }
+    private static final Logger logger= LogManager.getLogger(ObjectMethodTest.class);
 
     /*@Test
     public void deleteUserTest() {
@@ -89,7 +86,7 @@ public class ObjectMethodTest {
 
         System.out.println("idtest:" +idtest);
 
-    }*/
+    }
     @Test
     public void createUserTest() {
 
@@ -103,7 +100,30 @@ public class ObjectMethodTest {
         System.out.println("id:"+user.getId());
         System.out.println("name:"+user.getName());
         System.out.println("createdAt:"+user.getCreatedAt());
+    }*/
 
+    @Test
+    public void registerUserTest() {
 
+        logger.info("Create User Request");
+        CreateUserRequest userRequest = new CreateUserRequest();
+        userRequest.setEmail("eve.holt@reqres.in");
+        userRequest.setPassword("Password@2");
+        CreateUserResponse response = RestAssured
+                .given()
+                .when()
+                .body(userRequest)
+                .post("/register")
+                .then()
+                .statusCode(HttpStatus.SC_OK)
+                .extract()
+                .body()
+                .as(CreateUserResponse.class);
+        assertThat(response.getId(), equalTo(5));
+        assertThat(response.getToken(), equalTo("QpwL5tke4Pnpja7X45"));
+
+        logger.info("assertThat");
     }
+
+
 }

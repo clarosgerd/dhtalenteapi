@@ -1,3 +1,37 @@
-id:192
-name:morpheus
-$createdAt:2021-09-20T18:42:12.522Z
+Request method:	POST
+-Request URI:	https://reqres.in/api/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+#				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "password": "Password@2",
+"    "email": "eve.holt@reqres.in"
+}
+HTTP/1.1 200 OK
+%Date: Tue, 21 Sep 2021 18:15:21 GMT
+/Content-Type: application/json; charset=utf-8
+Content-Length: 36
+Connection: keep-alive
+x-powered-by: Express
+ access-control-allow-origin: *
+*etag: W/"24-4iP0za1geN2he+ohu8F0FhCjLks"
+via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+dExpect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+øReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9zLBLXTZ9pRX%2BnVkYGlNknjqWniPlwetWY2IYj3sGUEhMnrNBBTpjRKVtao2%2BmuvgPKgCAPKdcqFQgkMGJqhIDYhCykhxIQtnuMk97mbpzaVJ3Csl2NzfBG1P0U%3D"}],"group":"cf-nel","max_age":604800}
+CNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 692547452db64ff4-LIM
+falt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
+
+{
+    "id": 4,
+!    "token": "QpwL5tke4Pnpja7X4"
+}

@@ -11,16 +11,9 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
-public class PetMethodTest {
-
-    @Before
-    public void setup() {
+public class PetMethodTest extends  BaseApi{
 
 
-        RestAssured.baseURI = "https://reqres.in";
-        RestAssured.basePath = "/api";
-        RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
-    }
     @Test
     public void getSingleUserTest() {
 
